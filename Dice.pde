@@ -1,5 +1,3 @@
-Die bob; 
-
 void setup()
 {
   size(700,500);
@@ -8,6 +6,7 @@ void setup()
 }
 void draw()
 {
+  Die bob; 
   background(200);
   double totalDotNum = 0; 
   for(int p = 0; p <= 500; p+=50) {
