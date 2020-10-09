@@ -3,12 +3,12 @@ Die bob;
 void setup()
 {
   size(700,500);
-  background(0); 
+  background(200); 
   noLoop();
 }
 void draw()
 {
-  background(0);
+  background(200);
   double totalDotNum = 0; 
   for(int p = 0; p <= 500; p+=50) {
     for(int i = 0; i <= 500; i+=50) {
