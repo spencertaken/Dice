@@ -1,4 +1,32 @@
- class Die //models one single dice cube
+Die bob; 
+
+void setup()
+{
+  size(700,500);
+  background(200); 
+  noLoop();
+}
+void draw()
+{
+  background(200);
+  double totalDotNum = 0; 
+  for(int p = 0; p <= 500; p+=50) {
+    for(int i = 0; i <= 500; i+=50) {
+      bob = new Die(i,p);
+      bob.roll();
+      bob.show(); 
+      totalDotNum = totalDotNum+bob.numDot; 
+    }
+  }
+  text("The sum of your roll is " + (int)totalDotNum + "!", 553.5, 50);
+  text("The average of your roll is ", 555, 150);
+  text(totalDotNum/110 + "!", 570, 165); 
+}
+void mousePressed()
+{
+  redraw();
+}
+class Die //models one single dice cube
 {
   int myX, myY, ranDot, numDot; 
   
@@ -80,31 +108,3 @@
   }
 }
 
-
- void setup()
-{
-  size(700,500);
-  background(200); 
-  noLoop();
-}
-void draw()
-{
-  Die bob;
-  background(200);
-  double totalDotNum = 0; 
-  for(int p = 0; p <= 500; p+=50) {
-    for(int i = 0; i <= 500; i+=50) {
-      bob = new Die(i,p);
-      bob.roll();
-      bob.show(); 
-      totalDotNum = totalDotNum+bob.numDot; 
-    }
-  }
-  text("The sum of your roll is " + (int)totalDotNum + "!", 553.5, 50);
-  text("The average of your roll is ", 555, 150);
-  text(totalDotNum/110 + "!", 570, 165); 
-}
-void mousePressed()
-{
-  redraw();
-}
