@@ -40,28 +40,22 @@ class Die //models one single dice cube
   void roll()
   { 
     if (ranDot == 1) { //if it's 1 then do 1 dot
-      numDot = 1;
-      System.out.println(numDot); 
+      numDot = 1; 
     }
     else if (ranDot == 2) { //if it's 2 then do 2 dots
       numDot = 2;
-      System.out.println(numDot); 
     }
     else if (ranDot == 3) { //if it's 3 then do 3 dots
       numDot = 3;
-      System.out.println(numDot); 
     }
     else if (ranDot == 4) { //if it's 4 then do 4 dots
       numDot = 4;
-      System.out.println(numDot); 
     }
     else if (ranDot == 5) { //if it's 5 then do 5 dots
       numDot = 5;
-      System.out.println(numDot); 
     }
     else if (ranDot == 6) { //if it's 6 then do 6 dots
       numDot = 6;
-      System.out.println(numDot); 
     }
   }
   void show()
